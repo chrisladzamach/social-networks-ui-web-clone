@@ -3,7 +3,9 @@ import BurgerMenuIcon from "./icons/BurgerMenuIcon.astro";
 import SearchIcon from "../../icons/SearchIcon.astro";
 ---
 <header class="flex flex-row items-center gap-4 px-4 py-2 h-[63.6px]">
-  <BurgerMenuIcon class="text-zinc-400 cursor-pointer size-8" />
+  <a href="/">
+    <BurgerMenuIcon class="text-zinc-400 cursor-pointer size-8" />
+  </a>
   <span class="flex flex-row items-center gap-2 w-full bg-[#333] rounded-full px-8">
     <SearchIcon class="text-[#999] cursor-pointer" />
     <input type="text" class="w-full bg-[#333] text-zinc-400 h-12 text-xl" placeholder="Search">

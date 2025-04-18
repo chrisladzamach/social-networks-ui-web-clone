@@ -4,12 +4,11 @@ import StatesIcon from "./icons/StatesIcon.astro"
 import ChanelsIcon from "./icons/ChanelsIcon.astro"
 import CommunitiesIcon from "./icons/CommunitiesIcon.astro"
 import SettingsIcon from "./icons/SettingsIcon.astro"
-import ArrowLeftIcon from "./icons/ArrowLeftIcon.astro"
+import ArrowLeftIcon from "../../icons/ArrowLeftIcon.astro"
 ---
 
 <aside class="wsp-aside-menu bg-[#202c33] h-screen flex flex-col items-center justify-between py-2">
   <header class="flex flex-col gap-4">
-    <ArrowLeftIcon href="/" class="size-6 text-zinc-400 cursor-pointer" />
     <ChatIcon class="size-6 text-zinc-400 cursor-pointer" />
     <StatesIcon class="size-6 text-zinc-400 cursor-pointer" />
     <ChanelsIcon class="size-6 text-zinc-400 cursor-pointer" />
@@ -17,6 +16,8 @@ import ArrowLeftIcon from "./icons/ArrowLeftIcon.astro"
   </header>
   <footer class="flex flex-col gap-4">
     <SettingsIcon class="size-6 text-zinc-400 cursor-pointer" />
-    <img src="src/assets/perfil.jpg" alt="Profile image" class="size-8 rounded-full">
+    <a href="/">
+      <img src="src/assets/perfil.jpg" alt="Profile image" class="size-8 rounded-full">
+    </a>
   </footer>
 </aside>

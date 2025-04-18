@@ -1,25 +1,33 @@
 ---
+import WspIcon from '../icons/WspIcon.astro';
+import TgIcon from "../icons/TgIcon.astro";
+import DiscordIcon from '../icons/DiscordIcon.astro';
 
 ---
 
-<section class="flex flex-row w-screen h-screen items-center justify-center bg-purple-950 gap-2">
+<section class="flex flex-row w-screen h-screen items-center justify-center bg-black gap-4">
 
   <a 
     href="/whatsApp"
-    class="size-36 bg-blue-300 p-1 cursor-pointer hover:scale-105 
-  transition duration-200 rounded-lg flex flex-col items-center justify-center"
+    class="p-1 cursor-pointer hover:scale-105 
+  transition duration-200 ease-in-out rounded-lg flex flex-col items-center justify-center"
   >
-    <p class="font-bold text-xl">WhatsApp</p>
-    <p>Click to open</p>
+    <WspIcon class='size-12' />
   </a>
 
   <a 
     href="/telegram"
-    class="size-36 bg-blue-300 p-1 cursor-pointer hover:scale-105 
-  transition duration-200 rounded-lg flex flex-col items-center justify-center"
+    class="p-1 cursor-pointer hover:scale-105 
+  transition duration-200 ease-in-out rounded-lg flex flex-col items-center justify-center"
   >
-    <p class="font-bold text-xl">Telegram</p>
-    <p>Click to open</p>
+    <TgIcon class='size-12' />
+  </a>
+
+  <a href="discord"
+    class="p-1 cursor-pointer hover:scale-105 
+  transition duration-200 ease-in-out rounded-lg flex flex-col items-center justify-center"
+  >
+    <DiscordIcon class='size-12' />
   </a>
   
 </section>
