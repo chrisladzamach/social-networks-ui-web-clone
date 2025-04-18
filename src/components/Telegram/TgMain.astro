@@ -1,0 +1,33 @@
+---
+import SmailFaceIcon from "./icons/SmailFaceIcon.astro";
+import RecordIcon from "./icons/RecordIcon.astro";
+import ClipboardIcon from "./icons/ClipboardIcon.astro";
+---
+
+<div class="[grid-area:tg-main] w-full h-full bg-[#0f0f0f] px-120 flex flex-col justify-between py-3">
+  <section>
+    <!-- Aquí va el chat -->
+  </section>
+
+  <section class="flex flex-row items-center gap-2 w-full">
+    <span class="flex flex-row items-center gap-2 w-full rounded-lg px-8 py-1 bg-[#212121]">
+      <SmailFaceIcon class="text-zinc-400 cursor-pointer hover:text-[#8774e1]" />
+      <input type="text" class="w-full bg-transparent text-zinc-400 h-12 text-xl outline-none" placeholder="Message">
+      <ClipboardIcon class="text-zinc-400 cursor-pointer hover:text-[#8774e1]" />
+    </span>
+
+    <span class="flex flex-row items-center gap-2 rounded-full bg-[#212121] text-zinc-400 cursor-pointer p-4 hover:bg-[#8774e1] transition duration-200 hover:text-zinc-50">
+      <RecordIcon class="text-inherit" />
+    </span>
+    
+  </section>
+  
+</div>
+
+<style>
+  div {
+    background-image: url("../../assets/bg-tg.png");
+    background-repeat: repeat;
+    background-size: contain;
+  }
+</style>

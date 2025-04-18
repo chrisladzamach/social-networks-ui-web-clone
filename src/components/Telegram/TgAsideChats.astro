@@ -1,0 +1,23 @@
+---
+import { chatData } from "../../data/chats";
+import TgAsideChatHeader from "./TgAsideChatHeader.astro";
+
+// import TickIcon from "./icons/TickIcon.astro";
+---
+<aside class="bg-[#212121] max-h-screen [grid-area:tg-aside-chats] flex flex-col">
+  <TgAsideChatHeader />
+  <ul class="flex flex-col overflow-y-auto flex-1 transition duration-200">
+    {chatData.chats.map((chat) => (
+      <li class="flex flex-row items-center gap-2 p-2 cursor-pointer hover:bg-[#2c2c2c]">
+        <img src={chat.imagen} alt={chat.nombre} class="size-12 rounded-full" />
+        <span class="flex flex-col">
+          <strong class="text-zinc-400">{chat.nombre}</strong> 
+          <p class="text-zinc-400 flex flex-row items-center ">
+            {/* <TickIcon class="text-zinc-400" /> */}
+            {chat.mensaje}
+          </p>
+        </span>
+      </li>
+    ))}
+  </ul>
+</aside>

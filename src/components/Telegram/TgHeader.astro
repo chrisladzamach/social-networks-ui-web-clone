@@ -1,0 +1,21 @@
+---
+import SearchIcon from "../../icons/SearchIcon.astro"; 
+import MenuIcon from "../../icons/MenuIcon.astro";
+import CallIcon from "./icons/CallIcon.astro";
+---
+
+<header class="tg-header bg-[#212121] w-full flex flex-row justify-between">
+  <div class="flex flex-row items-center gap-2 pl-2 cursor-pointer">
+    <img src="src/assets/perfil.jpg" alt="" class="size-12 rounded-full ">
+    <span class="flex flex-col">
+      <p class="text-zinc-200 font-bold">Nombre Persona</p>
+      <p class="text-zinc-400 text-xs">Last seen recently</p>
+    </span>
+  </div>
+  <div class="flex flex-row items-center gap-2 pr-2">
+    <SearchIcon class="text-zinc-400 cursor-pointer" />
+    <CallIcon class="text-zinc-400 cursor-pointer" />
+    <MenuIcon class="text-zinc-400 cursor-pointer" />
+  </div>
+
+</header>

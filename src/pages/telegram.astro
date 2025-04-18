@@ -1,8 +1,30 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import TgAsideChats from "../components/Telegram/TgAsideChats.astro";
+import TgHeader from "../components/Telegram/TgHeader.astro";
+// import WspAsideMenu from "../components/whatsApp/WspAsideMenu.astro";
+// import WspAsideChats from "../components/whatsApp/WspAsideChats.astro";
+import TgMain from "../components/Telegram/TgMain.astro";
 ---
 
-<Layout title="telegram">
-  <a href="/" class="bg-blue-200 border-0 p-2 rounded-xl">⬅️ Back</a>
-  <h1>Telegram</h1>
+<Layout title="whatsApp">
+  <main>
+    <TgAsideChats />
+    <TgHeader />
+    <TgMain />
+  </main>
 </Layout>
+
+<style>
+main {
+  overflow: hidden;
+  display: grid;
+  grid-template-areas: 
+    "tg-aside-chats tg-header"
+    "tg-aside-chats tg-main";
+  grid-template-rows: 63.6px 1fr;
+  grid-template-columns: 270px 1fr;
+  height: 100vh;
+}
+
+</style>
