@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+import WspHeader from "../components/whatsApp/WspHeader.astro";
+import WspAsideMenu from "../components/whatsApp/WspAsideMenu.astro";
+import WspAsideChats from "../components/whatsApp/WspAsideChats.astro";
+import WspMain from "../components/whatsApp/WspMain.astro";
+---
+
+<Layout title="whatsApp">
+  <main>
+    <WspAsideMenu />
+    <WspAsideChats />
+    <WspHeader />
+    <WspMain />
+  </main>
+</Layout>
+
+<style>
+    main {
+      display: grid;
+      grid-template-areas: 
+      "wsp-aside-menu wsp-aside-chats wsp-header"
+      "wsp-aside-menu wsp-aside-chats wsp-main"
+      "wsp-aside-menu wsp-aside-chats wsp-main"
+      ;
+      grid-template-rows: 50px 300px 1fr;
+      grid-template-columns: 50px 300px 1fr;
+      height: 100vh;
+  }
+</style>

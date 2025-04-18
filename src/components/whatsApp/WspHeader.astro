@@ -1,0 +1,18 @@
+---
+import CameraIcon from "./icons/CameraIcon.astro";
+import SearchIcon from "./icons/SearchIcon.astro"; 
+import MenuIcon from "./icons/MenuIcon.astro";
+---
+
+<header class="wsp-header bg-[#202c33] w-full flex flex-row justify-between">
+  <div class="flex flex-row items-center gap-2 pl-2 cursor-pointer">
+    <img src="src/assets/perfil.jpg" alt="" class="size-8 rounded-full ">
+    <p class="text-zinc-400 font-bold">Nombre Persona</p>
+  </div>
+  <div class="flex flex-row items-center gap-2 pr-2">
+    <CameraIcon class="text-zinc-400 cursor-pointer" />
+    <SearchIcon class="text-zinc-400 cursor-pointer" />
+    <MenuIcon class="text-zinc-400 cursor-pointer" />
+  </div>
+
+</header>

@@ -1,0 +1,21 @@
+---
+import { chatData } from "../../data/chats";
+import TickIcon from "./icons/TickIcon.astro";
+---
+<aside class="wsp-aside-chats bg-[#111b21] h-screen">
+  <ul class="flex flex-col overflow-y-scroll max-h-screen transition duration-200">
+    {chatData.chats.map((chat) => (
+      <li class="flex flex-row items-center gap-2 p-2 cursor-pointer hover:bg-[#202c33]">
+        <img src={chat.imagen} alt={chat.nombre} class="size-8 rounded-full" />
+        <span class="flex flex-col">
+          <p class="text-zinc-400">{chat.nombre}</p> 
+          <p class="text-zinc-400 flex flex-row items-center">
+            <TickIcon class="text-zinc-400" />
+            {chat.mensaje}
+          </p>
+        </span>
+      </li>
+    ))}
+  </ul>
+  
+</aside>
