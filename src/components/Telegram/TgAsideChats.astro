@@ -2,7 +2,7 @@
 import { chatData } from "../../data/chats";
 import TgAsideChatHeader from "./TgAsideChatHeader.astro";
 
-// import TickIcon from "./icons/TickIcon.astro";
+import TickIcon from "../../icons/TickIcon.astro";
 ---
 <aside class="bg-[#212121] max-h-screen [grid-area:tg-aside-chats] flex flex-col">
   <TgAsideChatHeader />
@@ -10,8 +10,14 @@ import TgAsideChatHeader from "./TgAsideChatHeader.astro";
     {chatData.chats.map((chat) => (
       <li class="flex flex-row items-center gap-2 p-2 cursor-pointer hover:bg-[#2c2c2c]">
         <img src={chat.imagen} alt={chat.nombre} class="size-12 rounded-full" />
-        <span class="flex flex-col">
-          <strong class="text-zinc-400">{chat.nombre}</strong> 
+        <span class="flex flex-col w-full">
+          <strong class="text-zinc-400 flex justify-between">
+            {chat.nombre}
+            <span class="flex gap-x-1">
+              <TickIcon class="text-purple-400 font-light" />
+              <p class="text-xs text-zinc-600 font-light">Apr 9</p>
+            </span>
+          </strong> 
           <p class="text-zinc-400 flex flex-row items-center ">
             {/* <TickIcon class="text-zinc-400" /> */}
             {chat.mensaje}
